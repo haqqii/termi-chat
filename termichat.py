@@ -491,6 +491,10 @@ class Config:
         self.data[key] = value
         self.save()
 
+    def get(self, key, default=None):
+        """Get config value with default fallback"""
+        return self.data.get(key, default)
+
 # ============================================================
 # Session Management
 # ============================================================
